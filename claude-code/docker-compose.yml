@@ -1,0 +1,9 @@
+services:
+  claude-code:
+    build: .
+    container_name: claude-code
+    volumes:
+      - ./workspace:/workspace
+      - ./claude-data:/root/.claude
+      - ./CLAUDE.md:/root/.claude/CLAUDE.md
+    tty: true
